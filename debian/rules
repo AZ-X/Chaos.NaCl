@@ -16,6 +16,6 @@ override_dh_auto_build:
 	dh_auto_build
 
 override_dh_auto_install:
-	mkdir -p $(CURDIR)/debian/libchaos-nacl-cil/usr/lib/cli/chaos-nacl
-	cp $(CURDIR)/Chaos.NaCl/bin/Release/Chaos.NaCl.dll $(CURDIR)/debian/libchaos-nacl-cil/usr/lib/cli/chaos-nacl/
+	mkdir -p $(CURDIR)/debian/libchaos-nacl-cil/usr/lib/cli/Chaos.NaCl
+	cp $(CURDIR)/Chaos.NaCl/bin/Release/Chaos.NaCl.dll $(CURDIR)/debian/libchaos-nacl-cil/usr/lib/cli/Chaos.NaCl/
 	dh_auto_install
