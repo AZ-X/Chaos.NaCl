@@ -1,0 +1,19 @@
+Source: chaos-nacl
+Section: cli-mono
+Priority: optional
+Maintainer: David Lechner <david@lechnology.com>
+Build-Depends: debhelper (>= 10), cli-common-dev (>= 0.8)
+Standards-Version: 4.1.4
+Homepage: https://github.com/CodesInChaos/Chaos.NaCl
+Vcs-Git: https://github.com/dlech/Chaos.NaCl.git
+Vcs-Browser: https://github.com/dlech/Chaos.NaCl
+
+Package: libchaos-nacl-cli
+Architecture: all
+Depends: ${misc:Depends}, ${cli:Depends}
+Description: Cryptography library written in C# based on djb's NaCl
+ Currently it supports:
+  - Ed25519 signatures
+  - Key-exchange using either Curve25519 (montgomery form) or Ed25519 public keys
+  - Authenticated encryption using XSalsa20Poly1305
+  - Hashing using SHA-512

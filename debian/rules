@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@ --with cli
+
+override_dh_auto_clean:
+	xbuild /target:Clean /property:Configuration=Release Chaos.NaCl.sln
+	rm -rf -- **/bin **/obj **/doc
+	dh_auto_clean
+
+override_dh_auto_build:
+	xbuild /property:TargetFrameworkVersion=v4.5 /property:Configuration=Release Chaos.NaCl/Chaos.NaCl.csproj
+	dh_auto_build
+
+override_dh_auto_install:
+	mkdir -p $(CURDIR)/debian/libchaos-nacl-cli/usr/lib/cli/chaos-nacl
+	cp $(CURDIR)/Chaos.NaCl/bin/Release/Chaos.NaCl.dll $(CURDIR)/debian/libchaos-nacl-cli/usr/lib/cli/chaos-nacl/
+	dh_auto_install

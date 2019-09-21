@@ -1,0 +1,5 @@
+chaos-nacl (0.1.0.0) bionic; urgency=medium
+
+  * Initial release
+
+ -- David Lechner <david@lechnology.com>  Fri, 20 Sep 2019 19:11:58 -0500
