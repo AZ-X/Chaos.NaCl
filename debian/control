@@ -8,7 +8,7 @@ Homepage: https://github.com/CodesInChaos/Chaos.NaCl
 Vcs-Git: https://github.com/dlech/Chaos.NaCl.git
 Vcs-Browser: https://github.com/dlech/Chaos.NaCl
 
-Package: libchaos-nacl-cli
+Package: libchaos-nacl-cil
 Architecture: all
 Depends: ${misc:Depends}, ${cli:Depends}
 Description: Cryptography library written in C# based on djb's NaCl
